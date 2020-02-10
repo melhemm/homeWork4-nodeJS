@@ -9,7 +9,7 @@ app.post("/upload", upload.single("filedata"), function (req, res, next) {
     let filedata = req.file;
     console.log(filedata);
     if(!filedata)
-        res.send(`Not Upload Ereor`);
+        res.send(`Not Upload Error`);
     else {
         res.send(`You have uploaded this image: <br>
         <img src="${req.file.path}" width="350"><br>
